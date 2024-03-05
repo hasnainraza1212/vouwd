@@ -5,15 +5,15 @@ import axios from 'axios';
 const Layout = () => {
   useEffect(()=>{
     (async()=>{
-    const res= await axios.get("https://prod-test-hr.cyclic.app/", {withCredentials: true})
+    // const res= await axios.get("https://prod-test-hr.cyclic.app/", {withCredentials: true})
     // const res= await axios.get("http://localhost:3000/", {withCredentials: true})
-    console.log(res.data)
+    // console.log(res.data)
     })()
   },[])
   return (
     <div className="layout">
       <div className='header'>
-        <Header />
+        {/* <Header /> */}
       </div>
       <div className='outlet'>
         <Outlet />
