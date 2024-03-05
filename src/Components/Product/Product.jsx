@@ -1,32 +1,16 @@
-import { memo } from "react";
-import dish1 from "./../../assets/images/dish1.png";
+import React, { memo } from "react";
+import { Box, Button, Typography } from "@mui/material";
 import plus from "./../../assets/images/plus.png";
-import { Box, Typography } from "@mui/material";
-import { dishes } from "../../utils/utils";
-import Product from "../../Components/Product/Product";
-const Partners = ({
-  isMostPopular = true,
-  title = "chicken Steak Veggies",
-  text = "446 KKAL",
-  price = "$ 4.45",
-}) => {
-  return (
-    <Box
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(4, 1fr)",
-        gap: "20px",
-        padding:"50px"
-      }}
-    >
-      {/* <Box style={{
+const Product=({ title, isMostPopular, text, price, src, alt }) => {
+    return (
+        <Box style={{
             width:"100%",
             height:"100%",
             minWidth: "0px",
             boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
             borderRadius: "10px",
-
-          }} className="gridItem">
+            padding:"10px 35px"
+          }} >
         <Box
           style={{
             width:"100%",
@@ -48,8 +32,8 @@ const Partners = ({
                 objectFit: "contain",
                 filter: "drop-shadow(0 0 0.1rem crimson)",
               }}
-              src={dish1}
-              alt={"dish1"}
+              src={src}
+              alt={alt}
             />
           </Box>
           {isMostPopular && (
@@ -144,29 +128,8 @@ const Partners = ({
             </Box>
           </Box>
         </Box>
-      </Box> */}
-
-
-      {/* 1 */}
-
-      {dishes.map((dish, index) => (
-            
-            <Box className={"gridItem"} key={index}>
-              <Product
-                title={dish.title}
-                text={dish.text}
-                src={dish.src}
-                alt={dish.alt}
-                price={dish.price}
-                isMostPopular={dish.isMostPopular}
-
-              />
-            </Box>
-        ))}
-
-
-    </Box>
-  );
-};
-
-export default memo(Partners);
+      </Box>
+        
+    );
+  };
+export default memo(Product)

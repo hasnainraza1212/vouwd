@@ -1,9 +1,5 @@
 import { Box } from "@mui/material";
 import React from "react";
-import tamarisc from "./../../assets//images/tamarisc.png"
-import etsy from "./../../assets//images/etsy.png"
-
-
 const Partner = ({ partner }) => {
   return (
     <>

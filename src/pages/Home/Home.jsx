@@ -5,11 +5,15 @@ import { Box, Stack, Typography } from "@mui/material";
 import Heading from "../../Components/Heading";
 import Button from "../../Components/Button";
 import Partner from "../../Components/Partner/Partner";
-import { partners } from "../../utils/utils";
+import { dishes, partners, services } from "../../utils/utils";
+import Service from "../../Components/Service/Service";
+import Product from "../../Components/Product/Product";
+
 const headings = ["Eat healthy", "Live long", "Live strong"];
+
 const Home = () => {
   return (
-    <Box >
+    <Box>
       <Box
         sx={{
           display: "grid",
@@ -73,18 +77,18 @@ const Home = () => {
             marginLeft: {
               md: "8rem",
             },
-            textAlign:{
-              xs:"center",
-              md:"left"
-            }
+            textAlign: {
+              xs: "center",
+              md: "left",
+            },
           }}
         >
           <Typography
             variant="p"
             sx={{
               fontSize: {
-                xs:"1.3",
-                md:"1.5rem"
+                xs: "1.3",
+                md: "1.5rem",
               },
             }}
           >
@@ -117,7 +121,10 @@ const Home = () => {
               xs: "1.7rem",
               md: "3rem",
             },
-            mb: 6,
+            mb: {
+              xs: 1,
+              md: 6,
+            },
             color: "#4e4e4e",
           }}
         >
@@ -128,8 +135,8 @@ const Home = () => {
             display: "flex",
             justifyContent: "space-around",
             maxWidth: {
-              xs:"300px",
-              md:"1200px"
+              xs: "300px",
+              md: "1200px",
             },
             margin: "0 auto",
             alignItems: "center",
@@ -141,6 +148,67 @@ const Home = () => {
         </Box>
       </Box>
       {/* section  2 */}
+      {/* section 3 */}
+
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-around",
+          flexDirection:{
+            xs:"column",
+            md:"row"
+          },
+          maxWidth: {
+            xs: "300px",
+            md: "1200px",
+          },
+          margin: "0 auto",
+          mt: 5,
+          gap:"50px",
+          alignItems: "center",
+        }}
+      >
+        {services.map((service, index) => (
+          <Box key={index}>
+            <Service
+              count={++index}
+              title={service.title}
+              text={service.text}
+              src={service.uri}
+              alt={service.alt}
+            />
+          </Box>
+        ))}
+      </Box>
+      {/* section 3 */}
+      {/* section 4 */}
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: {
+            xs:"1fr",
+            md:"repeat(4, 1fr)"
+          },
+          gap: "20px",
+          maxWidth:"1200px",
+          margin:"0 auto",
+          mt:8
+        }}
+      >
+        {dishes.map((dish, index) => (
+          <Box className={"gridItem"} key={index}>
+            <Product
+              title={dish.title}
+              text={dish.text}
+              src={dish.src}
+              alt={dish.alt}
+              price={dish.price}
+              isMostPopular={dish.isMostPopular}
+            />
+          </Box>
+        ))}
+      </Box>
+      {/* section 4 */}
     </Box>
   );
 };
