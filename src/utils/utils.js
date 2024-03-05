@@ -20,22 +20,22 @@ export const partners = [
 
 export const services = [
   {
-    uri: rider,
+    uri: dish2,
     alt: "Menu",
     title: "Order a menu",
     text: "Our website offers a weekly menu. There is always something new to taste",
   },
   {
-    uri: rider,
-    alt: "Menu",
-    title: "Order a menu",
-    text: "Our website offers a weekly menu. There is always something new to taste",
+    uri: dish1,
+    alt: "Freshly Cook",
+    title: "Freshly Cook",
+    text: "LEt the food come to you directlyfromour kitchen. No Traffic problem, No Time wasted.",
   },
   {
-    uri: rider,
-    alt: "Menu",
-    title: "Order a menu",
-    text: "Our website offers a weekly menu. There is always something new to taste",
+    uri: dish3,
+    alt: "Delivered To You",
+    title: "Delivered To You",
+    text: "We Deliver you meal to your place so that your hectic schedule not distrub.",
   }
 ];
 
