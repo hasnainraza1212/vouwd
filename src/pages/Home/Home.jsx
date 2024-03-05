@@ -71,15 +71,21 @@ const Home = () => {
         <Box
           sx={{
             marginLeft: {
-              xs: "3rem",
               md: "8rem",
             },
+            textAlign:{
+              xs:"center",
+              md:"left"
+            }
           }}
         >
           <Typography
             variant="p"
             sx={{
-              fontSize: "1.5rem",
+              fontSize: {
+                xs:"1.3",
+                md:"1.5rem"
+              },
             }}
           >
             We cook and deliver the tastiest, healthiest food right away to your
@@ -108,7 +114,7 @@ const Home = () => {
           sx={{
             textAlign: "center",
             fontSize: {
-              xs: "1.5rem",
+              xs: "1.7rem",
               md: "3rem",
             },
             mb: 6,
