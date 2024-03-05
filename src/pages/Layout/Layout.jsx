@@ -13,7 +13,7 @@ const Layout = () => {
   return (
     <div className="layout">
       <div className='header'>
-        <Header />
+        {/* <Header /> */}
       </div>
       <div className='outlet'>
         <Outlet />
